@@ -1,25 +1,28 @@
 public class Prize {
     private int id;
-    private double money;
-    private String place;
+    private int place;
+    private double moneyPrize;
 
-    public Prize() {}
-
-    public Prize(int id, double money, String place) {
+    public Prize(int id, int place, double moneyPrize) {
         this.id = id;
-        this.money = money;
         this.place = place;
+        this.moneyPrize = moneyPrize;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-    public double getMoney() { return money; }
-    public void setMoney(double money) { this.money = money; }
-    public String getPlace() { return place; }
-    public void setPlace(String place) { this.place = place; }
+    public int getId() {
+        return id;
+    }
+
+    public int getPlace() {
+        return place;
+    }
+
+    public double getMoneyPrize() {
+        return moneyPrize;
+    }
 
     @Override
     public String toString() {
-        return "Prize [id=" + id + ", money=" + money + ", place=" + place + "]";
+        return "Prize{id=" + id + ", place=" + place + ", moneyPrize=" + moneyPrize + "}";
     }
 }

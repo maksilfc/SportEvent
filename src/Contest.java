@@ -1,41 +1,99 @@
-import java.util.Date;
-import java.util.List;
-
 public class Contest {
     private int id;
     private String name;
     private double entryFee;
-    private Date startDate;
-    private int duration; // In days
+    private String startingDate; // Simplified as a String
+    private int duration;
     private String location;
-    private List<Player> players;
-    private List<Prize> prizes;
+    private Type type;
+    private Category category;
 
-    public Contest() {}
-
-    public Contest(int id, String name, double entryFee, Date startDate, int duration, String location) {
+    public Contest(int id, String name, double entryFee, String startingDate, int duration, String location, Type type, Category category) {
         this.id = id;
         this.name = name;
         this.entryFee = entryFee;
-        this.startDate = startDate;
+        this.startingDate = startingDate;
         this.duration = duration;
+        this.location = location;
+        this.type=type;
+        this.category=category;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getEntryFee() {
+        return entryFee;
+    }
+
+    public void setEntryFee(double entryFee) {
+        this.entryFee = entryFee;
+    }
+
+    public String getStartingDate() {
+        return startingDate;
+    }
+
+    public void setStartingDate(String startingDate) {
+        this.startingDate = startingDate;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
         this.location = location;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public double getEntryFee() { return entryFee; }
-    public void setEntryFee(double entryFee) { this.entryFee = entryFee; }
-    public Date getStartDate() { return startDate; }
-    public void setStartDate(Date startDate) { this.startDate = startDate; }
-    public int getDuration() { return duration; }
-    public void setDuration(int duration) { this.duration = duration; }
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
-    public List<Player> getPlayers() { return players; }
-    public void setPlayers(List<Player> players) { this.players = players; }
-    public List<Prize> getPrizes() { return prizes; }
-    public void setPrizes(List<Prize> prizes) { this.prizes = prizes; }
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Contest{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", entryFee=" + entryFee +
+                ", startingDate='" + startingDate + '\'' +
+                ", duration=" + duration +
+                ", location='" + location + '\'' +
+                ", type=" + type +
+                ", category=" + category +
+                '}';
+    }
 }
+
